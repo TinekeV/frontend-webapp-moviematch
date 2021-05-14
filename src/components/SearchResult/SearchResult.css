@@ -1,0 +1,35 @@
+.result-details {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+
+    border: 1px solid #eeeeee;
+    border-radius: 10px;
+    margin: 10px 0px 10px 0px;
+}
+
+.result-details img {
+    width: 150px;
+    -webkit-border-top-left-radius: 10px;
+    -webkit-border-bottom-left-radius: 10px;
+}
+
+.result-details-text {
+    padding: 10px;
+    margin: 25px;
+}
+
+.result-details-text h3 {
+    margin: 10px 0px 10px 0px;
+}
+
+.search-link,
+.search-link:visited {
+    text-decoration: none;
+    color: #101010;
+}
+
+.poster-link {
+    margin-bottom: -5px;
+}
+

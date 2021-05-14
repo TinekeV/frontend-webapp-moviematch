@@ -1,0 +1,33 @@
+.userSignIn {
+    display: flex;
+}
+
+.signIn-icon {
+    width: 20px;
+    height: auto;
+}
+
+.signIn-text {
+    height: 25px;
+    padding: 4px;
+    margin: 4px;
+    border: 1px solid #eeeeee;
+
+    font-family: Roboto, sans-serif;
+    font-size: 18px;
+}
+
+.signIn-text:focus {
+    outline: 1px solid #FBE6C2;
+}
+
+::-webkit-input-placeholder {
+    font-family: Roboto, sans-serif;
+    opacity: 40%;
+    padding-left: 3px;
+}
+
+
+
+
+

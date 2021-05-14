@@ -1,0 +1,39 @@
+.header {
+    height: 8vh;
+    background-color: #101010;
+    color: #ffffff;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.links {
+    display: flex;
+}
+
+.header h1 {
+    font-family: "Fredoka One", sans-serif;
+    font-size: 38px;
+    color: #AC0D0D;
+
+    margin-left: 20px;
+}
+
+.header-link, .logo-link {
+    text-decoration: none;
+}
+
+.header-link,
+.header-link:visited {
+    color: #ffffff;
+    margin-right: 50px;
+    font-weight: bold;
+}
+
+
+.header-link:hover {
+    border-bottom: 2px solid #ffffff;
+}
+
+

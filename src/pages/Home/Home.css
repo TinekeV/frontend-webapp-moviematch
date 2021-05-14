@@ -1,0 +1,32 @@
+.introduction-container {
+    width: 100%;
+    height: 18vh;
+    background-color: #eeeeee;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.introduction-container h3 {
+    font-family: "Fredoka One", sans-serif;
+    font-size: 1.6rem;
+}
+
+.trending-container h3 {
+    font-family: "Fredoka One", sans-serif;
+    font-size: 1.6rem;
+    margin: 30px 0 20px 220px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.trending-movies, .trending-tv {
+    display: flex;
+    flex-wrap: wrap;
+
+    margin-left: 200px;
+    margin-bottom: 20px;
+}

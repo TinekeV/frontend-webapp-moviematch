@@ -1,0 +1,35 @@
+.tv-container {
+    width: 250px;
+    margin: 20px;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.tv-container img {
+    height: 350px;
+    border-radius: 2px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.tv-info {
+    width: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+.tv-info h3 {
+    font-family: Roboto, sans-serif;
+}
+
+.tv-info span {
+    border: 2px solid #101010;
+    background-color: #101010;
+    color: #eeeeee;
+    font-weight: bolder;
+    border-radius: 5px;
+    padding: 5px;
+}

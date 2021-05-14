@@ -1,0 +1,14 @@
+.watch-provider-container {
+    margin: 10px 20px 0 0;
+    display: flex;
+}
+
+.watch-provider {
+    display: flex;
+    margin-right: 20px;
+}
+
+.watch-provider img {
+    height: 40px;
+    margin-right: 5px;
+}

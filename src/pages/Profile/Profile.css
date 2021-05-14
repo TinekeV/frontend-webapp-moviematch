@@ -1,0 +1,42 @@
+.personal-details-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background: yellow;
+}
+
+.personal-details-form h1 {
+    margin: 16px;
+}
+
+.personal-details-form h3 {
+    margin: 8px;
+}
+
+.personal-details-title {
+    margin-top: 20px;
+    width: 600px;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    border: 1px solid #393939;
+
+    background: blueviolet;
+}
+
+.edit-button {
+    width: 110px;
+    height: 4vh;
+    margin-left: -10px;
+    background-color: #AC0D0D;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+
+    font-family: Roboto, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: lowercase;
+    cursor: pointer;
+}

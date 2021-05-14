@@ -1,0 +1,32 @@
+.searchBar-container {
+    display: flex;
+}
+
+.search-field {
+    width: 700px;
+    border: 1px solid #AC0D0D;
+    border-radius: 6px;
+    padding: 5px;
+    font-family: Roboto, sans-serif;
+    font-size: 20px;
+}
+
+.search-button {
+    width: 100px;
+    padding: 6px;
+    margin-left: -10px;
+    background-color: #AC0D0D;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+
+    font-family: Roboto, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: lowercase;
+    cursor: pointer;
+}
+
+.search-field:focus {
+    outline: none;
+}

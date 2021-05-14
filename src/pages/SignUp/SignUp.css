@@ -1,0 +1,46 @@
+.signUp {
+    width: 100%;
+    height: 94vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    background-image:
+            linear-gradient(to bottom, rgba(128, 128, 128, 0.45), rgb(16, 16, 16)),
+            url("./../../assets/background_intropage.jpeg");
+    background-size: cover;
+}
+
+.signUp-container {
+    width: 320px;
+    padding: 20px;
+    background-color: #F8F4EF;
+    border-radius: 5%;
+    box-shadow: rgba(0, 0, 0, 0.16) 0 1px 4px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.signUp-container h1 {
+    font-family: "Fredoka One", sans-serif;
+    font-size: 40px;
+    color: #AC0D0D;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.signUp-container h3 {
+    margin: 40px 0 0px 0;
+    font-size: 15px;
+}
+
+.signUp-container p {
+    font-size: 10px;
+    text-decoration: underline;
+
+    text-align: center;
+}
