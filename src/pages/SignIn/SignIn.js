@@ -27,6 +27,7 @@ function SignIn() {
                 password: data.password,
             })
             console.log(response)
+            console.log(response.data.accessToken)
             console.log(data)
             history.push("/home")
 

@@ -1,8 +1,11 @@
-import React, { useState } from "react";
+import React, { useContext } from "react";
+import { AuthContext } from "../../context/AuthContext";
 import "./Profile.css";
 import Header from "../../components/Header/Header";
 
 function Profile() {
+    const { user } = useContext(AuthContext);
+    console.log(user)
 
     return (
         <>
@@ -16,6 +19,11 @@ function Profile() {
                 <div className="personal-details-title">
                     <h1>Personal details</h1>
                     <button type="button" className="edit-button">edit profile</button>
+                </div>
+                <div>
+                    <h2>Username:</h2>
+                    <h2>Email:</h2>
+                    <h2>Password:</h2>
                 </div>
             </div>
         </>

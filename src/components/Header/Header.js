@@ -10,9 +10,10 @@ function Header({ userStatus }) {
             <NavLink to="/discover-tv" className="header-link"><h3>discover tv</h3></NavLink>
             <NavLink to="/search-results" className="header-link"><h3>search</h3></NavLink>
             </div>
-
+            <div className="links">
             {userStatus === "sign in" ? <NavLink to="/sign-in" className="header-link"><h3>{userStatus}</h3></NavLink> : <NavLink to="/profile" className="header-link">{userStatus}</NavLink>}
-
+            <h3>sign out</h3>
+            </div>
         </div>
     );
 }
