@@ -19,7 +19,7 @@ function TvPage() {
     useEffect(() => {
         async function getTvDetails() {
             try {
-                const { data } = await axios.get(`https://api.themoviedb.org/3/tv/${id}?api_key=4134a71adcd4373055f6202e9e7de077&language=en-US`)
+                const { data } = await axios.get(`https://api.themoviedb.org/3/tv/${id}?api_key=${process.env.REACT_APP_API_KEY}`)
                 console.log(data)
                 setTvDetails(data)
                 setGenres(data.genres)
