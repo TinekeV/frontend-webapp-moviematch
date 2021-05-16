@@ -13,17 +13,20 @@ function Profile() {
                 userStatus="profile"
             />
             <section className="introduction-container">
-                <h3>Hi, {user.username}</h3>
+                <h3>Hi {user.username},</h3>
+                <h3>welcome to your profile page.</h3>
             </section>
-            <div className="personal-details-form">
+            <div className="profile-container">
+            <section className="personal-details-form">
                 <div className="personal-details-title">
                     <h1>Personal details</h1>
                     <button type="button" className="edit-button">edit profile</button>
                 </div>
                 <div>
-                    <h2>Username: {user.username}</h2>
-                    <h2>Email: {user.email}</h2>
+                    <h3>Username: {user.username}</h3>
+                    <h3>Email: {user.email}</h3>
                 </div>
+            </section>
             </div>
         </>
     )

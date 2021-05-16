@@ -22,6 +22,7 @@
 
 .header-link, .logo-link {
     text-decoration: none;
+    position: relative;
 }
 
 .header-link,
@@ -31,9 +32,9 @@
     font-weight: bold;
 }
 
-
 .header-link:hover {
     border-bottom: 2px solid #ffffff;
 }
+
 
 

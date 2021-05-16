@@ -11,6 +11,7 @@ import TvPage from "./pages/TvPage/TvPage";
 import Profile from "./pages/Profile/Profile";
 import DiscoverPage from "./pages/DiscoverPage/DiscoverPage";
 import DiscoverTV from "./pages/DiscoverTV/DiscoverTV";
+import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
 
 function App() {
   return (
@@ -26,27 +27,27 @@ function App() {
           <Route path="/sign-up">
              <SignUp />
           </Route>
-          <Route path="/home">
+          <PrivateRoute path="/home">
               <Home />
-          </Route>
-          <Route path="/discover-movies">
+          </PrivateRoute>
+          <PrivateRoute path="/discover-movies">
               <DiscoverPage />
-          </Route>
-          <Route path="/discover-tv">
+          </PrivateRoute>
+          <PrivateRoute path="/discover-tv">
                 <DiscoverTV />
-          </Route>
-          <Route path="/search-results">
+          </PrivateRoute>
+          <PrivateRoute path="/search-results">
             <SearchResultsPage/>
-          </Route>
-          <Route path="/profile">
+          </PrivateRoute>
+          <PrivateRoute path="/profile">
               <Profile />
-          </Route>
-          <Route path="/movie/:id">
+          </PrivateRoute>
+          <PrivateRoute path="/movie/:id">
             <MoviePage />
-          </Route>
-          <Route path="/tv/:id">
+          </PrivateRoute>
+          <PrivateRoute path="/tv/:id">
               <TvPage />
-          </Route>
+          </PrivateRoute>
       </Switch>
     </>
   );

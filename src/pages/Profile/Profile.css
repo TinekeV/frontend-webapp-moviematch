@@ -1,9 +1,20 @@
+.profile-container {
+    display: flex;
+    justify-content: center;
+
+    margin-top: 50px;
+}
+
 .personal-details-form {
+    width: 500px;
+    padding: 20px;
+    background-color: #F8F4EF;
+    border-radius: 5%;
+    box-shadow: rgba(0, 0, 0, 0.16) 0 1px 4px;
+
     display: flex;
     flex-direction: column;
     align-items: center;
-
-    background: yellow;
 }
 
 .personal-details-form h1 {
@@ -11,18 +22,15 @@
 }
 
 .personal-details-form h3 {
-    margin: 8px;
+    margin: 16px;
 }
 
 .personal-details-title {
     margin-top: 20px;
-    width: 600px;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    border: 1px solid #393939;
-
-    background: blueviolet;
 }
 
 .edit-button {

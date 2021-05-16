@@ -1,7 +1,6 @@
 import React, { createContext, useState, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
 import axios from "axios";
-import IntroPage from "../pages/IntroPage/IntroPage";
 
 export const AuthContext = createContext({});
 

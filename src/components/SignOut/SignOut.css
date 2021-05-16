@@ -6,4 +6,9 @@
     font-weight: bold;
     font-family: Roboto, sans-serif;
     font-size: 16px;
+    cursor: pointer;
+}
+
+.sign-out-button:hover {
+    border-bottom: 2px solid #ffffff;
 }
