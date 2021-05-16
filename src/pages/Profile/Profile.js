@@ -13,7 +13,7 @@ function Profile() {
                 userStatus="profile"
             />
             <section className="introduction-container">
-                <h3>Hi, username</h3>
+                <h3>Hi, {user.username}</h3>
             </section>
             <div className="personal-details-form">
                 <div className="personal-details-title">
@@ -21,9 +21,8 @@ function Profile() {
                     <button type="button" className="edit-button">edit profile</button>
                 </div>
                 <div>
-                    <h2>Username:</h2>
-                    <h2>Email:</h2>
-                    <h2>Password:</h2>
+                    <h2>Username: {user.username}</h2>
+                    <h2>Email: {user.email}</h2>
                 </div>
             </div>
         </>

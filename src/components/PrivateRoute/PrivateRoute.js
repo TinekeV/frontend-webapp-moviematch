@@ -1,13 +1,13 @@
 // import React, { useContext } from "react";
 // import { Route, Redirect } from "react-router-dom"
-// import { AuthContext } from "./AuthContext";
+// import { AuthContext } from "../../context/AuthContext";
 //
 // function PrivateRoute({children, ...rest}) {
-//     const { login } = useContext(AuthContext)
+//     const { user } = useContext(AuthContext)
 //
 //     return (
 //         <Route {...rest}>
-//             {!login ? children : <Redirect to="/login"/>}
+//             {user !== null ? children : <Redirect to="/sign-in"/>}
 //         </Route>
 //     );
 // }

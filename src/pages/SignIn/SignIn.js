@@ -1,21 +1,23 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { useForm } from "react-hook-form";
-import { NavLink, useHistory } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import { AuthContext } from "../../context/AuthContext";
+import axios from "axios";
 import './SignIn.css';
 
+// components
 import Header from "../../components/Header/Header";
-import UserInput from "../../components/UserInput/UserInput";
 
+// images
 import userIcon from './../../assets/icons/user-icon.svg'
 import padlockIcon from './../../assets/icons/padlock-icon.svg'
-import emailIcon from "../../assets/icons/email-icon.svg";
-import axios from "axios";
 
 function SignIn() {
+    const { login } = useContext(AuthContext)
+
     const [loading, toggleLoading] = useState(false);
     const [error, setError] = useState(false);
     const { handleSubmit, register } = useForm();
-    const history = useHistory();
 
     async function Login(data) {
         setError('');
@@ -27,9 +29,10 @@ function SignIn() {
                 password: data.password,
             })
             console.log(response)
-            console.log(response.data.accessToken)
             console.log(data)
-            history.push("/home")
+            // console.log(response.data.accessToken)
+
+            login(response.data.accessToken)
 
         } catch (e) {
             setError('Something went wrong while trying to log into your account, please try again')
