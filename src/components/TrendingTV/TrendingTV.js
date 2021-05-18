@@ -1,11 +1,10 @@
 import React from 'react';
-import './TrendingTV.css'
-import { NavLink } from 'react-router-dom'
+import './TrendingTV.css';
+import { NavLink } from 'react-router-dom';
 
-const TvPoster = `https://image.tmdb.org/t/p/original`
+const TvPoster = `https://image.tmdb.org/t/p/original`;
 
 function TrendingTV({ name, vote_average, poster_path, id }) {
-
     return (
         <>
             <div className="tv-container">
@@ -19,5 +18,4 @@ function TrendingTV({ name, vote_average, poster_path, id }) {
     );
 }
 
-
-export default TrendingTV
+export default TrendingTV;

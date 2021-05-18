@@ -1,22 +1,19 @@
 import './App.css';
 import { Switch, Route } from 'react-router-dom';
-
-import SignIn from "./pages/SignIn/SignIn";
-import IntroPage from "./pages/IntroPage/IntroPage";
-import SignUp from "./pages/SignUp/SignUp";
-import Home from "./pages/Home/Home";
-import SearchResultsPage from "./pages/SearchResultsPage/SearchResultsPage";
-import MoviePage from "./pages/MoviePage/MoviePage";
-import TvPage from "./pages/TvPage/TvPage";
-import Profile from "./pages/Profile/Profile";
-import DiscoverPage from "./pages/DiscoverPage/DiscoverPage";
-import DiscoverTV from "./pages/DiscoverTV/DiscoverTV";
-import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
+import SignIn from './pages/SignIn/SignIn';
+import IntroPage from './pages/IntroPage/IntroPage';
+import SignUp from './pages/SignUp/SignUp';
+import Home from './pages/Home/Home';
+import SearchResultsPage from './pages/SearchResultsPage/SearchResultsPage';
+import MoviePage from './pages/MoviePage/MoviePage';
+import TvPage from './pages/TvPage/TvPage';
+import DiscoverPage from './pages/DiscoverPage/DiscoverPage';
+import DiscoverTV from './pages/DiscoverTV/DiscoverTV';
+import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 
 function App() {
   return (
     <>
-    {/*  Hier komt de routing voor alle pages*/}
       <Switch>
           <Route exact path="/">
               <IntroPage />
@@ -38,9 +35,6 @@ function App() {
           </PrivateRoute>
           <PrivateRoute path="/search-results">
             <SearchResultsPage/>
-          </PrivateRoute>
-          <PrivateRoute path="/profile">
-              <Profile />
           </PrivateRoute>
           <PrivateRoute path="/movie/:id">
             <MoviePage />

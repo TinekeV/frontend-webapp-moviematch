@@ -1,16 +1,17 @@
 .movie-container {
     width: 250px;
     margin: 20px;
-
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    border: 1px solid #eeeeee;
+    box-shadow: rgba(0, 0, 0, 0.16) 0 1px 4px;
 }
 
 .movie-container img {
     height: 350px;
+    margin-top: 10px;
     border-radius: 2px;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 
 .movie-info {
@@ -19,18 +20,13 @@
     align-items: center;
     justify-content: space-between;
     padding: 15px;
-
-}
-
-.movie-info h3 {
-    font-family: Roboto, sans-serif;
 }
 
 .movie-info span {
     border: 2px solid #101010;
     background-color: #101010;
     color: #eeeeee;
-    font-weight: bolder;
+    font-weight: 600;
     border-radius: 5px;
     padding: 5px;
 }

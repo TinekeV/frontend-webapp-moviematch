@@ -1,42 +1,36 @@
 import React, { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
 import './MoviePage.css';
-import axios from "axios";
-import { useParams } from 'react-router-dom'
-import Header from "../../components/Header/Header";
-import posterUnavailable from "../../assets/image-not-available.jpg";
-import MovieProvider from "../../components/MovieProvider/MovieProvider";
-import SimilarMovies from "../../components/SimilarMovies/SimilarMovies";
-import createDataString from "../../helpers/createDataString";
+import axios from 'axios';
+import Header from '../../components/Header/Header';
+import posterUnavailable from '../../assets/image-not-available.jpg';
+import MovieProvider from '../../components/MovieProvider/MovieProvider';
+import SimilarMovies from '../../components/SimilarMovies/SimilarMovies';
+import createDataString from '../../helpers/createDataString';
 
-const poster = `https://image.tmdb.org/t/p/original/`
+const poster = `https://image.tmdb.org/t/p/original/`;
 
 function MoviePage() {
     const { id } = useParams();
-    const [movieDetails, setMovieDetails] = useState("")
-    const [genres, setGenres] = useState("")
-
+    const [movieDetails, setMovieDetails] = useState("");
+    const [genres, setGenres] = useState("");
 
     useEffect(() => {
         async function getMovieDetails() {
             try {
-                const { data } = await axios.get(`https://api.themoviedb.org/3/movie/${id}?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&`)
-                console.log(data)
-                setMovieDetails(data)
-                setGenres(data.genres)
-
+                const { data } = await axios.get(`https://api.themoviedb.org/3/movie/${id}?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&`);
+                setMovieDetails(data);
+                setGenres(data.genres);
             } catch (e) {
-                console.error(e)
+                console.error(e);
             }
         }
-        getMovieDetails()
+        getMovieDetails();
     }, [id])
 
     return (
         <>
-            <Header
-                userStatus="profile"
-            />
-
+            <Header/>
             <div className="movie-details">
                 <img src={movieDetails.poster_path ? poster + movieDetails.poster_path : posterUnavailable} alt={movieDetails.title} />
                 <div className="movie-details-text">
@@ -63,7 +57,7 @@ function MoviePage() {
                 <SimilarMovies/>
             </div>
         </>
-    )
+    );
 }
 
 export default MoviePage;

@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import './Home.css';
-import axios from "axios";
-import Header from "../../components/Header/Header";
-import TrendingMovies from "../../components/TrendingMovies/TrendingMovies";
-import TrendingTV from "../../components/TrendingTV/TrendingTV";
+import axios from 'axios';
+import Header from '../../components/Header/Header';
+import TrendingMovies from '../../components/TrendingMovies/TrendingMovies';
+import TrendingTV from '../../components/TrendingTV/TrendingTV';
 import loadingGif from '../../assets/loading-gif.gif'
 
 const trendingMoviesUrl = `https://api.themoviedb.org/3/trending/movie/week?api_key=${process.env.REACT_APP_API_KEY}`
@@ -12,8 +12,8 @@ const trendingTvUrl= `https://api.themoviedb.org/3/trending/tv/week?api_key=${pr
 function Home() {
     const [movies, setMovies] = useState([]);
     const [tvshows, setTVShows] = useState([]);
-    const [error, setError] = useState('')
-    const [loading, toggleLoading] = useState(false)
+    const [error, setError] = useState('');
+    const [loading, toggleLoading] = useState(false);
 
     useEffect( () => {
         async function fetchTrendingMovies(){
@@ -21,19 +21,15 @@ function Home() {
             toggleLoading(true);
 
             try {
-                const { data } = await axios.get(trendingMoviesUrl)
-                console.log(data);
-                setMovies(data.results.slice(0,10))
-
+                const { data } = await axios.get(trendingMoviesUrl);
+                setMovies(data.results.slice(0,10));
             } catch (e) {
-                setError('Something went wrong while fetching the data, please refresh the page')
-                console.error(e)
+                setError('Something went wrong while fetching the data, please refresh the page');
+                console.error(e);
             }
-            toggleLoading(false)
+            toggleLoading(false);
         }
-
-        fetchTrendingMovies()
-
+        fetchTrendingMovies();
     }, [])
 
     useEffect(() => {
@@ -42,31 +38,25 @@ function Home() {
             toggleLoading(true);
 
             try {
-                const { data } = await axios.get(trendingTvUrl)
-                setTVShows(data.results.slice(0,10))
-
+                const { data } = await axios.get(trendingTvUrl);
+                setTVShows(data.results.slice(0,10));
             } catch (e) {
-                setError('Something went wrong while fetching the data, please refresh the page')
-                console.error(e)
+                setError('Something went wrong while fetching the data, please refresh the page');
+                console.error(e);
             }
-            toggleLoading(false)
+            toggleLoading(false);
         }
-
-        fetchTrendingTV()
-
+        fetchTrendingTV();
     }, [])
 
 
     return (
         <>
-            <Header
-                userStatus="profile"
-            />
+            <Header/>
                 <section className="introduction-container">
                     {error && <p>{error}</p>}
                     <h3>Get inspired on what to watch next with the most popular Movies and TV Shows.</h3>
                 </section>
-
                 <section className="trending-container">
                     <h3>Popular movies this week</h3>
                     <div className="trending-movies">
@@ -91,6 +81,6 @@ function Home() {
                 </section>
         </>
     );
-};
+}
 
-export default Home
+export default Home;

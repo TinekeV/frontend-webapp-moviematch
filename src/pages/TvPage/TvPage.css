@@ -1,7 +1,6 @@
 .tv-details {
     background-color: #393939;
     padding: 80px;
-
     display: flex;
     flex-wrap: nowrap;
     justify-content: center;
@@ -11,7 +10,6 @@
     width: 1000px;
     padding: 10px;
     margin-left: 20px;
-
     color: #ffffff;
 }
 
@@ -23,7 +21,7 @@
 .tv-details img {
     height: 400px;
     border-radius: 2px;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0 1px 4px;
 }
 
 .tv-details-text h1 {
@@ -33,7 +31,7 @@
 .tv-details-text span {
     border: 2px solid #101010;
     background-color: #101010;
-    font-weight: bolder;
+    font-weight: 600;
     border-radius: 5px;
     padding: 5px;
 }
@@ -64,14 +62,13 @@
     height: 300px;
     width: 200px;
     border-radius: 2px;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0 1px 4px;
     position: relative;
 }
 
 .seasons {
     width: 250px;
     margin: 20px;
-
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -84,10 +81,9 @@
 
 .seasons-title {
     font-family: "Fredoka One", sans-serif;
-    font-size: 25px;
+    font-size: 1.6rem;
     color: #393939;
-    margin: 30px 0px 10px 300px;
-
+    margin: 30px 0 10px 300px;
     display: flex;
 }
 
@@ -108,7 +104,7 @@
 .season-hover p {
     color: #ffffff;
     padding: 10px;
-    font-size: 12px;
+    font-size: 0.75rem;
 }
 
 .season-hover h4, h5 {
@@ -116,7 +112,6 @@
     text-align: center;
     margin-top: 15px;
 }
-
 
 .season-hover::-webkit-scrollbar-track
 {

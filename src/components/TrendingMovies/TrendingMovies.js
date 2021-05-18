@@ -1,11 +1,10 @@
 import React from 'react';
-import './TrendingMovies.css'
-import { NavLink } from 'react-router-dom'
+import './TrendingMovies.css';
+import { NavLink } from 'react-router-dom';
 
-const moviePoster = `https://image.tmdb.org/t/p/original`
+const moviePoster = `https://image.tmdb.org/t/p/original`;
 
 function TrendingMovies({ title, vote_average, poster_path, id }) {
-
     return (
         <>
             <div className="movie-container">
@@ -20,5 +19,4 @@ function TrendingMovies({ title, vote_average, poster_path, id }) {
     );
 }
 
-
-export default TrendingMovies
+export default TrendingMovies;

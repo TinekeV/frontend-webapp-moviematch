@@ -1,9 +1,9 @@
-import React from "react";
-import {NavLink} from "react-router-dom";
-import "./Pagination.css"
+import React from 'react';
+import {NavLink} from 'react-router-dom';
+import './Pagination.css';
 
 function Pagination({pages, fetchData, currentPage}) {
-    const pageLinks = []
+    const pageLinks = [];
 
     for(let i = 1; i <= pages; i ++) {
         let activePage = currentPage === i ? "activePage" : ""
@@ -12,7 +12,7 @@ function Pagination({pages, fetchData, currentPage}) {
             Math.abs(currentPage - i) <= 1
         )
         pageLinks.push(<li className={`pagination-page ${activePage}`} key={i} onClick={() => {fetchData(i)}}><NavLink to="#" className="page-link">{i}</NavLink></li>)
-    }
+    };
 
     return (
         <div className="pagination">
@@ -22,7 +22,7 @@ function Pagination({pages, fetchData, currentPage}) {
                 </ul>
             </div>
         </div>
-    )
+    );
 }
 
-export default Pagination
+export default Pagination;

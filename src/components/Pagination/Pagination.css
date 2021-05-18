@@ -3,36 +3,34 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 3rem;
-    margin: 2rem;
+    height: 48px;
+    margin: 32px;
 }
 
 ul {
     list-style-type: none;
 }
 
-
 .pagination-page {
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
-
-    width: 2rem;
-    height: 2rem;
-    margin: 1rem;
-    border-radius: 0.2rem;
+    width: 32px;
+    height: 32px;
+    margin: 16px;
+    border-radius: 3px;
 }
 
 .pagination-page li:hover {
     background: rgba(244, 139, 41, 0.5);
-    margin: 1rem;
+    margin: 16px;
 }
 
 .page-link,
 .page-link:visited {
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 600;
     color: #101010;
 }
 

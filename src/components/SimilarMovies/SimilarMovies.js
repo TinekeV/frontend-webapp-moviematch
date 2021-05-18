@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from "react";
-import './SimilarMovies.css'
-import axios from "axios";
-import {NavLink, useParams} from 'react-router-dom'
-import createDataString from "../../helpers/createDataString";
+import React, { useState, useEffect } from 'react';
+import {NavLink, useParams} from 'react-router-dom';
+import './SimilarMovies.css';
+import axios from 'axios';
+import createDataString from '../../helpers/createDataString';
 
-const poster = `https://image.tmdb.org/t/p/original/`
+const poster = `https://image.tmdb.org/t/p/original/`;
 
 function SimilarMovies() {
     const [ similarMovies, setSimilarMovies] = useState([]);
@@ -13,15 +13,13 @@ function SimilarMovies() {
     useEffect(() => {
         async function getSimilarMovies() {
             try {
-                const { data } = await axios.get(`https://api.themoviedb.org/3/movie/${id}/similar?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&`)
-                console.log(data.results)
-                setSimilarMovies(data.results.slice(0,6))
-
+                const { data } = await axios.get(`https://api.themoviedb.org/3/movie/${id}/similar?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&`);
+                setSimilarMovies(data.results.slice(0,6));
             } catch (e) {
-                console.error(e)
+                console.error(e);
             }
         }
-        getSimilarMovies()
+        getSimilarMovies();
     }, [id])
 
     return (
@@ -40,7 +38,7 @@ function SimilarMovies() {
             })}
             </div>
         </div>
-    )
+    );
 }
 
-export default SimilarMovies
+export default SimilarMovies;

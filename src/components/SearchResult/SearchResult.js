@@ -1,12 +1,11 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
-import "./SearchResult.css"
-import posterUnavailable from "./../../assets/image-not-available.jpg"
+import React from 'react';
+import { NavLink } from 'react-router-dom';
+import './SearchResult.css';
+import posterUnavailable from './../../assets/image-not-available.jpg';
 
-const poster = `https://image.tmdb.org/t/p/w185/`
+const poster = `https://image.tmdb.org/t/p/w185/`;
 
 function SearchResult({ title, name, overview, poster_path, id, media_type }) {
-
     return (
         <>
             <div className="result-details">
@@ -22,5 +21,4 @@ function SearchResult({ title, name, overview, poster_path, id, media_type }) {
     );
 }
 
-
-export default SearchResult
+export default SearchResult;

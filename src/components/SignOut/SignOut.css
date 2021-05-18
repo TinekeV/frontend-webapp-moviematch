@@ -3,9 +3,9 @@
     background-color: #101010;
     color: #ffffff;
     margin-right: 20px;
-    font-weight: bold;
+    font-weight: 600;
     font-family: Roboto, sans-serif;
-    font-size: 16px;
+    font-size: 1rem;
     cursor: pointer;
 }
 

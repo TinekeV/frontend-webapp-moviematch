@@ -1,16 +1,17 @@
 .tv-container {
     width: 250px;
     margin: 20px;
-
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    border: 1px solid #eeeeee;
+    box-shadow: rgba(0, 0, 0, 0.16) 0 1px 4px;
 }
 
 .tv-container img {
     height: 350px;
+    margin-top: 10px;
     border-radius: 2px;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 
 .tv-info {
@@ -21,15 +22,11 @@
     padding: 15px;
 }
 
-.tv-info h3 {
-    font-family: Roboto, sans-serif;
-}
-
 .tv-info span {
     border: 2px solid #101010;
     background-color: #101010;
     color: #eeeeee;
-    font-weight: bolder;
+    font-weight: 600;
     border-radius: 5px;
     padding: 5px;
 }
